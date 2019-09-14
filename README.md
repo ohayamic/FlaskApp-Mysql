@@ -17,7 +17,7 @@ For an indepth guy on how to install mysql on ubuntu, follow these staps [How To
 
 ### step 2: Create the database
 - Login to mysql with command
-  - mysql -u root -p it _will prompt you for a password as given here:_ ``` Enter password:****** ```
+  - mysql -u root -p    (it _will prompt you for a password as given here:_ ) ``` Enter password:****** ```
 - Once logged in, it is adviceable to create your own database with command
   - CREATE DATABASE myflaskapp 
 - Then use the database just created with the command
