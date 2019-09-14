@@ -16,12 +16,22 @@ For an indepth guy on how to install mysql on ubuntu, follow these staps [How To
 
 
 ### step 2: Create the database
-- Login to mysql 
-* mysql -u root -p it will prompt you for a password as given here: ** Enter password:****** **
-- Once logged in, it is adviceable to create your own database
+- Login to mysql with command
+  - mysql -u root -p it _will prompt you for a password as given here:_ ``` Enter password:****** ```
+- Once logged in, it is adviceable to create your own database with command
+  - CREATE DATABASE myflaskapp 
+- Then use the database just created with the command
+  - use myflaskapp
+ - Then create two tables named ```users``` and ```articles```
+  - create table users(id INT(11) NOT NULL AUTO_INCREMENT, name VARCHAR(100) NOT NULL, username VARCHAR(100) NOT NULL,             email VARCHAR(100) NOT NULL, password VARCHAR(100) NOT NULL, register_date default current_timestamp);
 
+and 
+
+  -  create table articles(id INT(11) NOT NULL AUTO_INCREMENT, title VARCHAR(200) NOT NULL, author VARCHAR(100) NOT NULL,          body VARCHAR(500) NOT NULL, date_created default current_timestamp);
+
+### step 3: Clone and run the application
 In other to get started with this application, you will have to download it using these commands:
 - git clone https://github.com/ohayamic/FlaskApp-Mysql.git
-- cd "project name"
+- cd FlaskApp-Mysql
 - python app.py
 
