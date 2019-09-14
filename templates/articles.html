@@ -1,0 +1,47 @@
+{% extends 'layout.html'%} {% block body %}
+<div class="container" style="margin-bottom: 20px">
+  <div
+    class="row"
+    style="margin-top: -10px; margin-bottom: 30px; margin-left: 30px"
+  >
+    <a href="/add_article">
+      <div
+        class="col-xs-5 col-sm-3 col-md-3 btn btn-primary"
+        style="color:white; font-size:24px"
+      >
+        Add Aticle
+      </div>
+    </a>
+    <div class=" col-xs-1 col-sm-4 col-md-4"></div>
+    <div
+      class=" col-xs-6 col-sm-5 col-md-5"
+      style="font-size:30px; font-weight: 900; margin-top: 10px "
+    >
+      Welcome {{ session.username }}
+    </div>
+  </div>
+
+  <h1 style="font-weight: 900; margin:20px 30px;">All Articles</h1>
+  {% for article in articles%}
+  <div style="font-size: 24px; margin-bottom: 20px;">
+    <div style="padding: 30px">
+      <div class="card-body">
+        <h5 style="font-size: 24px; font-weight: bolder">
+          {{ article.title }}
+        </h5>
+        <p class="card-text">{{ article.body | safe }}</p>
+        <p style="font-size: 18px">
+          <small>
+            written by: {{ article.author }} on
+            {{ article.date_created }}
+          </small>
+        </p>
+        <a href="/article/{{ article.id }}" class="btn btn-success btn-lg">
+          View Article
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor%}
+</div>
+{% endblock %}

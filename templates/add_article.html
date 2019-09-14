@@ -1,0 +1,32 @@
+{% from 'includes/formhelpers.html' import render_field%} {% extends
+'layout.html' %} {% block body %}
+
+<div class="container w-50">
+  <form method="POST" action="" style="margin-bottom:20px;">
+    <div class="text-center">
+      <img
+        src="{{url_for('static', filename='images/share_opinion.png')}}"
+        class="rounded"
+        alt="alternate-image"
+        style="width:50%; height: 50%; margin-bottom: 10px;"
+      />
+    </div>
+    <div style="width: 50%; margin: 0 auto;">
+      <div class="form-row">
+        {{render_field(form.title, class='form-control')}}
+      </div>
+      <div class="form-row">
+        {{render_field(form.body, class='form-control', id='editor')}}
+      </div>
+
+      <div style="margin-top: 10px;">
+        <input
+          class="btn btn-primary btn-lg"
+          type="submit"
+          value="Add Article"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid" style="margin: 0px 50px;">
+    <a
+      class="navbar-brand"
+      href="/"
+      style="color:white; font-size: 24px; font-weight: 600"
+    >
+      Navbar
+    </a>
+    <div>
+      <ul class="nav navbar-nav" style="font-size: 24px; font-weight: 600">
+        <li><a href="/" style="color:white">Home </a></li>
+        <li>
+          <a href="/contact" style="color:white">Contact</a>
+        </li>
+        <li>
+          <a href="/technologies" style="color:white">Technologies</a>
+        </li>
+        <li><a href="/portfolio" style="color:white">Portfolio</a></li>
+      </ul>
+
+      <ul
+        class="nav navbar-nav navbar-right"
+        style="font-size: 24px; font-weight: 600"
+      >
+        <!-- Add logic to the navigation bar -->
+        {% if session.logged_in%}
+        <li>
+          <a href="/articles" style="color:white">Dashboard </a>
+        </li>
+        <li>
+          <a href="/logout" style="color:white">Logout</a>
+        </li>
+
+        {% else%}
+        <li>
+          <a href="/signup" style="color:white">Sign Up </a>
+        </li>
+        <li><a href="/login" style="color:white">Login</a></li>
+
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

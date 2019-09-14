@@ -1,0 +1,12 @@
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for category, message in messages %}
+<div class=" container alert alert-{{ category }}">
+  <p>{{ message }}</p>
+</div>
+{% endfor %} {% endif %} {% endwith %} {% if error %}
+
+<!-- displays the error from the routes-->
+<div class="container alert alert-{{ danger }}">{{ error }}</div>
+{% endif %} {% if msg %}
+<div class="container alert alert-{{ danger }}">{{ msg }}</div>
+{% endif %}

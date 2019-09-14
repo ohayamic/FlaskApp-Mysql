@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text"
+      href="{{url_for('static', filename='mainstyle.css')
+    }}"
+    />
+    <title>Flask APP</title>
+  </head>
+
+  <body
+    style="margin-bottom: -30px; background: #F8D353;
+    background: -webkit-linear-gradient(top left, #F8D353, #B4A9A8);
+    background: -moz-linear-gradient(top left, #F8D353, #B4A9A8);
+    background: linear-gradient(to bottom right, #F8D353, #B4A9A8);"
+  >
+    {% include 'includes/navBar.html'%} {% include 'includes/message.html'%}{%
+    block body %} {% endblock%}{% include 'includes/footer.html'%}
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+      CKEDITOR.replace("editor");
+    </script>
+  </body>
+</html>

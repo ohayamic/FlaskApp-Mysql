@@ -1,0 +1,50 @@
+{% from 'includes/formhelpers.html' import render_field%}{% extends
+'layout.html' %} {% block body %}
+<div class="container ">
+  <form method="POST" action="" style="margin-bottom: 2rem;">
+    <div class="text-center">
+      <img
+        src="{{url_for('static', filename='images/login1.png')}}"
+        class="rounded"
+        alt="alternate-image"
+        style="width:50%; height: 50%; margin-bottom: 10px;"
+      />
+    </div>
+    <div
+      class="form-row"
+      style=" width: 50%; margin: 0 auto; margin-bottom: 2rem"
+    >
+      <label>Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name="username"
+        placeholder="Username"
+      />
+    </div>
+    <div class="form-row" style="width: 50%; margin: 0 auto;">
+      <label>Password</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        placeholder="Password"
+      />
+    </div>
+    <div style="width: 50%; margin:0 auto; margin-top: 20px;">
+      <div style="width: 80%; margin:0 auto;">
+        <input
+          class="btn btn-primary btn-lg"
+          type="submit"
+          value="Login"
+          style="margin-left: 40px"
+        />
+        <span class="mt-2">Not registered yet! go to Sign Up</span>
+        <a class="btn btn-primary btn-lg ml-2" href="/signup">
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
