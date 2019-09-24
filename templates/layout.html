@@ -14,6 +14,7 @@
       href="{{url_for('static', filename='mainstyle.css')
     }}"
     />
+    <script src="//cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
     <title>Flask APP</title>
   </head>
 
@@ -26,10 +27,116 @@
     {% include 'includes/navBar.html'%} {% include 'includes/message.html'%}{%
     block body %} {% endblock%}{% include 'includes/footer.html'%}
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="//cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
     <script type="text/javascript">
-      CKEDITOR.replace("editor");
+      CKEDITOR.replace("editor1");
+    </script>
+
+    <!-- Adding javascript functionality to the site-->
+    <script type="text/javascript">
+      // change button color
+      var buttonLinks = document.getElementsByClassName("btn");
+
+      var footerLinks = document.getElementById("footerLinks");
+      var buttons = document.getElementsByClassName("link");
+
+      function myButton() {
+        var i = 0;
+        for (i; i < 2; i++) {
+          if (buttonLinks[0].classList[0] === "btn") {
+            buttonLinks[0].style.borderColor = "black";
+          }
+        }
+      }
+      myButton;
+
+      buttonLinks[0].onmouseover = function() {
+        buttonLinks[0].style.backgroundColor = "#94e3cf";
+        buttonLinks[0].style.fontSize = "22px";
+      };
+
+      buttonLinks[1].onmouseover = function() {
+        buttonLinks[1].style.backgroundColor = "#94e3cf";
+        buttonLinks[1].style.fontSize = "22px";
+      };
+      buttonLinks[2].onmouseover = function() {
+        buttonLinks[2].style.backgroundColor = "#94e3cf";
+        buttonLinks[2].style.fontSize = "22px";
+      };
+
+      buttonLinks[3].onmouseover = function() {
+        buttonLinks[3].style.backgroundColor = "#94e3cf";
+        buttonLinks[3].style.fontSize = "22px";
+      };
+
+      buttonLinks[0].onmouseleave = function() {
+        buttonLinks[0].style.backgroundColor = "#34c926";
+      };
+
+      buttonLinks[1].onmouseleave = function() {
+        buttonLinks[1].style.backgroundColor = "#34c926";
+      };
+      buttonLinks[2].onmouseleave = function() {
+        buttonLinks[2].style.backgroundColor = "#34c926";
+      };
+
+      buttonLinks[3].onmouseleave = function() {
+        buttonLinks[3].style.backgroundColor = "#34c926";
+      };
+
+      // footer button styling
+
+      footerLinks.addEventListener("mouseover", function(e) {
+        if (e.target.classList[0] === "link") {
+          e.target.style.color = "#94e3cf";
+          e.target.style.fontSize = "24px";
+        } else if (e.target.classList[0] === " ") {
+          e.target.style.color = "white";
+        }
+      });
+
+      buttons[0].onmouseleave = function() {
+        buttons[0].style.color = "white";
+        buttons[0].style.fontSize = "22px";
+      };
+
+      buttons[1].onmouseleave = function() {
+        buttons[1].style.color = "white";
+        buttons[1].style.fontSize = "22px";
+      };
+
+      buttons[2].onmouseleave = function() {
+        buttons[2].style.color = "white";
+        buttons[2].style.fontSize = "22px";
+      };
+
+      buttons[3].onmouseleave = function() {
+        buttons[3].style.color = "white";
+        buttons[3].style.fontSize = "22px";
+      };
+
+      buttons[4].onmouseleave = function() {
+        buttons[4].style.color = "white";
+        buttons[4].style.fontSize = "22px";
+      };
+
+      buttons[5].onmouseleave = function() {
+        buttons[5].style.color = "white";
+        buttons[5].style.fontSize = "22px";
+      };
+
+      buttons[6].onmouseleave = function() {
+        buttons[6].style.color = "white";
+        buttons[6].style.fontSize = "22px";
+      };
+
+      buttons[7].onmouseleave = function() {
+        buttons[7].style.color = "white";
+        buttons[7].style.fontSize = "22px";
+      };
+      buttons[8].onmouseleave = function() {
+        buttons[8].style.color = "white";
+        buttons[8].style.fontSize = "22px";
+      };
     </script>
   </body>
 </html>
